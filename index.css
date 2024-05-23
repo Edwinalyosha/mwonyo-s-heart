@@ -1,0 +1,193 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('images/bg2.png');
+    background-size:cover;
+    background-position: bottom center;
+    height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5vh 5vw;
+  }
+
+  .hero-content {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    line-height: 1.2;
+  }
+  
+  .hero .highlight {
+    color: var(--secondary-color);
+  }
+  
+  .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius:1em;
+  }
+  
+  .cta-button:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .hero-content {
+      max-width: 70%;
+      margin-top: 5vh;
+    }
+  
+    .hero h1 {
+      font-size: 2.5em;
+    }
+  
+    .cta-button {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      background-position: center;
+      justify-content: center;
+    }
+  
+    .hero-content {
+      max-width: 90%;
+      text-align: center;
+      margin-top: 7vh;
+      font-size: 0.9em;
+    }
+  
+    .hero h1 {
+      font-size: 2em;
+    }
+  
+    .cta-button {
+      font-size: 0.9em;
+    }
+  }
+  
+
+  /* about us section*/
+  .sec2 {
+    background-color: var(--primary-color-2);
+    padding: 5vh 7vw; /* Applying general padding */
+    padding-top:0;
+  }
+  
+  .sec-header {
+    background-color: var(--secondary-color);
+    display: inline-block;
+    padding: 1vh 1vw;
+    font-size: 2em;
+    margin-bottom: 4vh; /* Space between header and content */
+    color:white;
+    font-weight: bolder;
+  }
+  
+  .about-us-content {
+    text-align: left;
+  }
+  
+  .about-description {
+    max-width: 90%;
+    margin-bottom: 5vh; /* Space between paragraph and columns */
+    padding-left:2vw;
+  }
+  
+  .about-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures columns stack on smaller screens */
+  }
+  
+  .column {
+    flex: 1 1 28%; /* Allows flex to grow and shrink but not beyond 30% of the container */
+    margin: 0 1vw; /* Horizontal space between columns */
+    text-align: left; /* Centering the text in each column */
+  }
+
+  .column:last-of-type{
+    flex:1 1 35%;
+  }
+  
+  .column h3 {
+    margin-bottom: 2vh; /* Space between header and paragraph in columns */
+  }
+
+  #goals{
+    list-style:circle;
+    text-align: left;
+    padding-left:0;
+  }
+
+  #goals li{
+    padding-bottom:4px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-description {
+      text-align: center;
+      max-width: 100%;
+    }
+  
+    .about-columns {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .column {
+      margin-bottom: 5vh; /* Vertical space between stacked columns */
+    }
+  }
+  
+
+  /* our programs */
+  .sec1 {
+    background-color: var(--primary-color-1);
+    padding: 5vh 7vw; /* Applying general padding */
+    padding-top:0;
+  }
+  
+  .card {
+    width: 45%; /* Adjust so two cards fit in a row with space between */
+    margin-bottom: 2vh; /* Space between rows */
+    text-decoration: none; /* Remove underline from links */
+    color: var(--text-color); /* Ensure text color consistency */
+    border: none; /* Optional: in case you want borders */
+    overflow: hidden; /* Ensures no part of the image spills out of the card */
+    display: inline-flex;
+    flex-wrap:wrap;
+    margin:1% 2%;
+  }
+  
+  .card img {
+    width: 100%; /* Make image cover the entire width of the card */
+    height: 40vh; /* Set a fixed height for all images */
+    display: block; /* Removes bottom margin/gap under the image */
+    object-fit: cover; /* Ensures the image covers the area without distorting ratio */
+  }
+  
+  .card-caption {
+    text-align: center; /* Center-align the text */
+    padding: 1vh 0; /* Padding above and below the text */
+    background-color: var(--primary-color-1); /* Background color of the caption */
+  }
+
+  @media (max-width: 750px) {
+    .card {
+      width: 100%; /* Each card takes full width on smaller screens */
+    }
+  }
