@@ -108,18 +108,20 @@
   
   .about-columns {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     flex-wrap: wrap; /* Ensures columns stack on smaller screens */
   }
   
   .column {
-    flex: 1 1 28%; /* Allows flex to grow and shrink but not beyond 30% of the container */
+    flex: 1 1 40%; /* Allows flex to grow and shrink but not beyond 30% of the container */
     margin: 0 1vw; /* Horizontal space between columns */
     text-align: left; /* Centering the text in each column */
   }
 
-  .column:last-of-type{
-    flex:1 1 35%;
+  .column:first-of-type{
+    flex:1 1 60%;
+    max-width:70%;
+    margin-bottom:5vh;
   }
   
   .column h3 {
