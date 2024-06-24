@@ -100,6 +100,28 @@
     margin-right:4vw;
 }
 
+.sec2 {
+  background-color: var(--primary-color-2);
+  padding: 5vh 7vw; /* Applying general padding */
+  padding-top:0;
+}
+
+.sec1 {
+  background-color: var(--primary-color-1);
+  padding: 5vh 7vw; /* Applying general padding */
+  padding-top:0;
+}
+
+.sec-header {
+  background-color: var(--secondary-color);
+  display: inline-block;
+  padding: 1vh 1vw;
+  font-size: 2em;
+  margin-bottom: 4vh; /* Space between header and content */
+  color:white;
+  font-weight: bolder;
+}
+
 
 
 /*footer styling*/

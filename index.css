@@ -80,89 +80,30 @@
   
 
   /* about us section*/
-  .sec2 {
-    background-color: var(--primary-color-2);
-    padding: 5vh 7vw; /* Applying general padding */
-    padding-top:0;
-  }
-  
-  .sec-header {
-    background-color: var(--secondary-color);
-    display: inline-block;
-    padding: 1vh 1vw;
-    font-size: 2em;
-    margin-bottom: 4vh; /* Space between header and content */
-    color:white;
-    font-weight: bolder;
-  }
-  
-  .about-us-content {
-    text-align: left;
-  }
-  
-  .about-description {
-    max-width: 90%;
-    margin-bottom: 5vh; /* Space between paragraph and columns */
-    padding-left:2vw;
-  }
-  
-  .about-columns {
+
+  #link-container {
     display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap; /* Ensures columns stack on smaller screens */
-  }
-  
-  .column {
-    flex: 1 1 40%; /* Allows flex to grow and shrink but not beyond 30% of the container */
-    margin: 0 1vw; /* Horizontal space between columns */
-    text-align: left; /* Centering the text in each column */
-  }
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between links as needed */
+    margin: 0 auto;
+}
 
-  .column:first-of-type{
-    flex:1 1 60%;
-    max-width:70%;
-    margin-bottom:5vh;
-    align-self: flex-start;
-  }
-  
-  .column h3 {
-    margin-bottom: 2vh; /* Space between header and paragraph in columns */
-  }
 
-  #goals{
-    list-style:circle;
-    text-align: left;
-    padding-left:0;
-  }
+.central-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bolder;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-  #goals li{
-    padding-bottom:4px;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .about-description {
-      text-align: center;
-      max-width: 100%;
-    }
-  
-    .about-columns {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .column {
-      margin-bottom: 5vh; /* Vertical space between stacked columns */
-    }
-  }
-  
+.central-link:hover {
+    background-color: #ccc; /* Adjust the hover background color as needed */
+}
+
 
   /* our programs */
-  .sec1 {
-    background-color: var(--primary-color-1);
-    padding: 5vh 7vw; /* Applying general padding */
-    padding-top:0;
-  }
+  
   
   .card {
     width: 45%; /* Adjust so two cards fit in a row with space between */

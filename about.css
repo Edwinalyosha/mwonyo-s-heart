@@ -1,0 +1,135 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: 75vh; /* Adjust the height as needed */
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+}
+
+.text-container {
+    flex: 0 0 45%;
+    background-color: var(--primary-color-1); /* Adjust the color as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color); /* Adjust the text color as needed */
+    padding: 5vh 5vw;
+    z-index: 2; /* Ensure text stays above the overlay */
+}
+
+.image-fade {
+    flex: 0 0 55%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--primary-color-1)), url('images/happy boy.jpg') center/cover no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('images/happy boy.jpg') center/cover no-repeat; /* Background image for mobile */
+        overflow: hidden;
+    }
+
+    .text-container {
+        flex: 0 0 60%;
+        background-color: initial;
+        color: var(--primary-color-2);
+        z-index: 2; /* Ensure text stays above the overlay */
+    }
+
+    .banner::before {
+        content: '';
+        position: absolute; /* Correct positioning for overlay */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 1; /* Ensure the overlay is above the background but below the text */
+    }
+
+    .text-container > * {
+        position: relative;
+        z-index: 2; /* Ensure text stays above the overlay */
+    }
+
+    .image-fade {
+        display: none; /* Hide the image fade on mobile */
+    }
+}
+
+/*the about us section now*/
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-box {
+    background-color: var(--primary-color-2); /* Adjust the background color as needed */
+    padding:2vh 3vw;
+    max-width:80vw;
+}
+
+.responsive-list {
+    columns: 2; /* Create two columns */
+    column-gap: 20px; /* Adjust the gap between columns */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.responsive-list li {
+    break-inside: avoid; /* Prevent items from breaking between columns */
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .responsive-list {
+        columns: 1; /* Collapse to one column on mobile */
+    }
+}
+
+/* now for the section of the history*/
+
+.history-content {
+    column-count: 2; /* Two columns for desktop */
+    column-gap: 2vw; /* Gap between columns */
+    padding-left:3vw;
+    line-height: 20pt;
+}
+
+.history-content h2 {
+    break-inside: avoid; /* Prevents the heading from breaking between columns */
+    margin-bottom: 10px;
+}
+
+.history-content p {
+    margin-bottom: 10px;
+}
+
+.history-content img {
+    height:30vh;
+    width: 80%; /* Images occupy the full width of the column */
+    
+    margin: 10px 0; /* Add some margin for spacing */
+    break-inside: avoid; /* Prevents the image from breaking between columns */
+}
+
+@media (max-width: 768px) {
+    .history-content {
+        column-count: 1; /* Collapse to one column on mobile */
+    }
+}
