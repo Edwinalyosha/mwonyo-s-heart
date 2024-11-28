@@ -1,0 +1,127 @@
+
+.ml-auto{
+    margin-left:auto;
+}
+
+.bg-picture{
+    background-color:#eee;
+    background-image:url("images/stop\ racism.jfif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+}
+
+
+.banner{
+    height:70vh;
+    color:honeydew;
+}
+
+/*should be a little bit bigger on larger screens*/
+
+
+#about-us .row{
+    width:initial;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (min-width: 900px){
+    .banner{
+        height:75vh;
+    }
+
+    #about-us .row{
+        width:60vw;
+        
+    }
+}
+
+
+/* the about section styling*/
+
+.about-intro{
+    padding-top:4%;
+    padding-bottom:3%;
+}
+
+#about-us .row{
+    width:75vw;
+}
+
+
+/* now to deal with the member section*/
+
+/* Container styling */
+#members .container {
+    display: grid; /* Use CSS Grid for layout */
+    gap: 2rem; /* Spacing between grid items */
+    padding: 0 5vw; /* Add some padding on the sides */
+}
+
+/* Grid settings for different screen sizes */
+@media (min-width: 992px) { /* Large screens (desktop) */
+    #members .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* Tablets */
+    #members .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+@media (max-width: 767px) { /* Phones */
+    #members .container {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+}
+
+/* Individual member entry */
+.member-entry {
+    display: flex; /* Align name and image side-by-side */
+    align-items: center;
+    gap: 1rem; /* Space between the image and text */
+}
+
+.member-img {
+    height: 10em;
+    width: 60%; /* have ca constant width */
+    object-fit: cover; /* Ensure the image fills the space nicely */
+    border-radius: 30%; /* Optional: Make the image circular */
+}
+
+.member-info {
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.member-info a {
+    text-decoration: none;
+}
+
+.member-name {
+    padding-top: 7%;
+}
+
+@media (max-width: 570px) {
+    .member-info {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .member-img {
+        height: 8em; /* Reduce image size for smaller screens */
+    }
+}
+
+
+
+/* all of the elements with the color:  color:rgb(253,29,29);*/
+
+/* in case whe do not manage to make the area behind banner header white then:*/
+
+.banner h2{
+    color:#EB1400;
+    
+}
